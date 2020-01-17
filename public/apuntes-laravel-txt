@@ -1,7 +1,7 @@
 
 [*] Verificar Estado de git..
     git status
-
+    
     Inicializar repositorio git
     git init 
 

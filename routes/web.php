@@ -11,20 +11,14 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'HomeController@index');
 
 // // Rutas anonimas
 // Route::get('/test', function () {
 //     return 'Este es un mensaje de prueba';
 // });
 
-Route::get('/test', function () {
-     return view('test', [
-         'title' => 'Curso de Laravel!! '
-     ]);
-});
+Route::get('/dashboard', 'DashboardController@index');
 
     
 // Rutas con array
