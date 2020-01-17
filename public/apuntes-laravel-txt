@@ -14,11 +14,35 @@
     git remote add origin [https://github.com/bolivar014/AppShop.git]
  	git remote add origin https://github.com/bolivar014/CursoVueJS_Laravel
 	 
+    
     git push -f origin master
 
 [*] Descargar el repositorio inicial de laravel.
 	composer create-project --prefer-dist laravel/laravel [nombre_App]
 	composer create-project --prefer-dist laravel/laravel AppShop
+
+
+// metodos para los Tipos de rutas...
+    post
+    put
+    delete
+    any // recibe cualesquier tipo de metodo
+
+
+[*] Creacion de rutas anonimas
+    // Rutas anonimas
+    Route::get('/test', function () {
+        return 'Este es un mensaje de prueba';
+    });
+
+    // Rutas con array
+    Route::get('/array', function () {
+        return [
+            'saludo' => 'Este es un',
+            'nombre' => 'mensaje de prueba'
+        ];
+    });
+
 
 
 [*] Creación de los controladores de Rutas. 
@@ -34,6 +58,7 @@
 			@section('content')
 				datos que cargaran en la MasterPage
 			@endsection
+
 
 
 [*]	Creación de Migrations

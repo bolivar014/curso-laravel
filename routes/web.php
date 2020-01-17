@@ -14,3 +14,21 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+// // Rutas anonimas
+// Route::get('/test', function () {
+//     return 'Este es un mensaje de prueba';
+// });
+
+Route::get('/test', function () {
+     return view('test');
+});
+
+    
+// Rutas con array
+Route::get('/array', function () {
+    return [
+        'saludo' => 'Este es un',
+        'nombre' => 'mensaje de prueba'
+    ];
+});
