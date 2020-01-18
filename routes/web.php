@@ -28,3 +28,5 @@ Route::get('/array', function () {
         'nombre' => 'mensaje de prueba'
     ];
 });
+
+Route::resource('/expense_reports', 'ExpenseReportController');
