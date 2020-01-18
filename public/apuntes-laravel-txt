@@ -28,6 +28,11 @@
     delete
     any // recibe cualesquier tipo de metodo
 
+// Error al ejecutar migraciones en las migrations user y password reset, columna email...
+	// Originial
+	$table->string('email')->index();
+	// Final - Se le agrega que sea longitud x tamaño db
+	$table->string('email', 12)->index();
 
 [*] Creacion de rutas anonimas
     // Rutas anonimas
@@ -72,7 +77,10 @@
 		Editar una migración existente
 		php artisan make:migration nombre_migracion_ --table [nombreTable]
 		php artisan make:migration add_created_at_index_to_messages_table --table messages
-		php artisan make:migratrion create_articulos_table
+		php artisan make:migration create_articulos_table
+		
+		php artisan make:migration create_table_expense_reports --create=expense_reports
+		
 		-- 
 		Para este caso en el esquema de esta migración en el metodo UP
 		 	$table->index('created_at');
