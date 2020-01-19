@@ -100,6 +100,14 @@
 		// para modificar la tabla anterior se ejecuta...
 		php artisan make:migration create_column_title_in_reports --table=expense_reports
 
+		php artisan make:model -m Expense
+
+		// Relacionar db con tinker
+		App\ExpenseReport::first()->expenses; // extrae el primer registro de la db en la tabla ExpenseReport
+		App\Expense::first()->expenseReport;
+
+		php artisan make:controller --resource ExpenseController
+
 		-- 
 		Para este caso en el esquema de esta migración en el metodo UP
 		 	$table->index('created_at');
