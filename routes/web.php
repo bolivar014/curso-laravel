@@ -30,3 +30,4 @@ Route::get('/array', function () {
 });
 
 Route::resource('/expense_reports', 'ExpenseReportController');
+//Route::resource('/expense_reports/create', 'ExpenseReportController');

@@ -27,7 +27,8 @@ class ExpenseReportController extends Controller
      */
     public function create()
     {
-        //
+        // Retorno la vista Create expenseReport
+        return view('expenseReport.create');
     }
 
     /**
@@ -38,7 +39,12 @@ class ExpenseReportController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // Almaceno los datos recibidos desde el POST del formulario CREATE
+        $report = new ExpenseReport();
+        $report->title = $request->get('title');
+        $report->save();
+
+        return redirect('/expense_reports');
     }
 
     /**
