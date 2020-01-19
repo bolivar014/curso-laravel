@@ -39,6 +39,10 @@ class ExpenseReportController extends Controller
      */
     public function store(Request $request)
     {
+        $validaData = $request->validate([
+            'title' => 'required | min:3'
+        ]);
+
         // Almaceno los datos recibidos desde el POST del formulario CREATE
         $report = new ExpenseReport();
         $report->title = $request->get('title');
