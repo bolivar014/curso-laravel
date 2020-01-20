@@ -215,6 +215,11 @@
 
 [*] Agregar Autenticación en laravel...
 	php artisan make:auth
+
+	// Para versiones de Laravel Superiores a 6.0, se utiliza la siguientes instancias para crear el Scraffolding de Auth-
+	composer require laravel/ui --dev
+	php artisan ui vue --auth
+	npm install && npm run dev	// En caso de Requerir npm
 	
 [*] Ejecutar los seeds creados.
 	php artisan db:seed

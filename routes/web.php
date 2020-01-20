@@ -41,3 +41,7 @@ Route::get('/expense_reports/{id}/confirmSendEmail', 'ExpenseReportController@co
 
 Route::post('/expense_reports/{id}/SendEmail', 'ExpenseReportController@SendEmail');
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
